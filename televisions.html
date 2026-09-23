@@ -13,16 +13,33 @@
     <header id="site-header"></header>
 
     <main>
-        <h1>Television Energy Consumption</h1>
+        <!-- 1. The issue (hook) -->
+        <h1>Buying a TV? Size Matters More Than You Think</h1>
         <p class="intro">
-            Televisions are one of the most common appliances in Australian homes. The charts below
-            explore the TV models registered in Australia by screen technology, size, brand, star rating
-            and power use. Where a chart has tabs, click them to switch between views.
+            Almost every Australian home has a television, and screens keep getting bigger. But a TV
+            doesn't just cost money at the checkout. It keeps costing you every time it's switched on.
+            We looked at every TV model registered for sale in Australia to find out what really drives
+            a TV's power use, and how you can pick one that's kinder to your power bill.
         </p>
 
-        <!-- Q1: two views, switched with tabs -->
+        <div class="key-points">
+            <p><strong>The short version:</strong></p>
+            <ol>
+                <li>Bigger screens use more power: it is the biggest factor.</li>
+                <li>But TVs of the same size can differ hugely, so check the star rating.</li>
+                <li>Screen technology and brand matter less than size and stars.</li>
+            </ol>
+        </div>
+
+        <!-- 2. What's in the shops (context) -->
+        <h2 class="story-heading">What's in the shops?</h2>
+        <p>
+            Before looking at power use, it helps to know what you'll be choosing from.
+        </p>
+
         <article class="chart">
-            <h2>1. What TV screen technologies are available, and which are most frequent?</h2>
+            <p class="question">Question 1: Which screen technologies are available?</p>
+            <h3>Most TVs on sale are LED-backlit LCD</h3>
             <div class="chart-tabs" role="tablist">
                 <button class="tab active" data-view="pie" role="tab" aria-selected="true"
                         data-tooltip="Share of models by technology">Pie chart</button>
@@ -35,93 +52,162 @@
                 <img class="chart-view" data-view="bar" src="images/charts/q1-screen-tech-barchart.png"
                      alt="Bar chart of TV models by screen technology: LCD (LED) 3797, LCD 484, OLED 292">
                 <figcaption>
-                    Three technologies are available: LCD (LED), LCD and OLED. LCD (LED) is by far the most
-                    frequent with 3,797 models, compared with 484 LCD and 292 OLED models.
+                    LCD (LED) makes up the large majority of models (3,797). Standard LCD (484) and
+                    OLED (292) are far less common, so most shoppers will be comparing LED models.
                 </figcaption>
             </figure>
         </article>
 
         <article class="chart">
-            <h2>2. What screen sizes are available, and which are most frequent?</h2>
+            <p class="question">Question 2: Which screen sizes are most common?</p>
+            <h3>55" and 65" are the most popular sizes</h3>
             <figure>
                 <img src="images/charts/q2-screen-sizes.png"
                      alt="Bar chart of the number of TV models for each screen size in inches">
                 <figcaption>
-                    Sizes range from under 20 to over 110 inches. The most frequent are 65" and 55"
-                    (around 770 models each), followed by 75" (around 630) and 85" (around 350).
+                    65" and 55" each have around 770 models, followed by 75" (around 630). Big screens are
+                    now the norm, which is why screen size is so important for running costs.
                 </figcaption>
             </figure>
         </article>
 
         <article class="chart">
-            <h2>3. Which brands have the largest number of models?</h2>
+            <p class="question">Question 3: Which brands have the most models?</p>
+            <h3>A few brands dominate the range</h3>
             <figure>
                 <img src="images/charts/q3-brand-models.png"
                      alt="Bar chart of the ten brands with the most TV models, led by Kogan with 809">
                 <figcaption>
-                    Kogan has the most models (809), followed by LG (723) and Samsung Electronics (699).
-                    Samsung also appears separately with 497 models, so combined it would rank first.
+                    Kogan (809), LG (723) and Samsung lead. Samsung is registered under two names
+                    ("Samsung Electronics" 699 and "Samsung" 497). Together it would have the most models.
                 </figcaption>
             </figure>
         </article>
 
-        <article class="chart">
-            <h2>4. Which screen technology consumes the least power?</h2>
-            <figure>
-                <img src="images/charts/q4-tech-power.png"
-                     alt="Bar chart of median average on-mode power by screen technology: LCD 71.35, LCD (LED) 106, OLED 112.70">
-                <figcaption>
-                    LCD has the lowest median power use (71.35&nbsp;W), followed by LCD (LED) at 106&nbsp;W.
-                    OLED uses the most at 112.70&nbsp;W.
-                </figcaption>
-            </figure>
-        </article>
+        <!-- 3. Main finding -->
+        <h2 class="story-heading">The biggest driver: screen size</h2>
 
         <article class="chart">
-            <h2>5. What is the relationship between screen size and power use?</h2>
+            <p class="question">Question 5: How does screen size relate to power use?</p>
+            <h3>The bigger the screen, the more power it uses</h3>
             <figure>
                 <img src="images/charts/q5-size-vs-power.png"
-                     alt="Scatter plot of screen size in inches against average on-mode power">
+                     alt="Scatter plot of screen size in inches against average on-mode power, rising from under 50 watts for small screens to 200 to 600 watts for the largest">
                 <figcaption>
-                    There is a clear positive relationship: larger screens use more power. The spread in
-                    power use also widens as screen size increases.
+                    Power use climbs steadily with screen size. Small TVs under 40" mostly use less than
+                    50&nbsp;W, while 85" and larger TVs commonly use 150 to 500&nbsp;W. Notice the dots also
+                    spread out as screens get bigger. We come back to that below.
                 </figcaption>
             </figure>
         </article>
 
         <article class="chart">
-            <h2>6. What is the relationship between star rating and screen size?</h2>
+            <p class="question">What does that mean for your power bill?</p>
+            <h3>Going from a 55" to an 85" TV can more than double the running cost</h3>
+            <div class="cost-chart" role="img"
+                 aria-label="Estimated yearly running cost by screen size: under 40 inches $35, 40 to 49 inches $77, 50 to 59 inches $105, 60 to 69 inches $138, 70 to 79 inches $179, 80 inches and over $257">
+                <div class="cost-row"><span class="cost-label">Under 40"</span><span class="cost-bar" style="width: 14%"></span><span class="cost-value">$35</span></div>
+                <div class="cost-row"><span class="cost-label">40–49"</span><span class="cost-bar" style="width: 30%"></span><span class="cost-value">$77</span></div>
+                <div class="cost-row"><span class="cost-label">50–59"</span><span class="cost-bar" style="width: 41%"></span><span class="cost-value">$105</span></div>
+                <div class="cost-row"><span class="cost-label">60–69"</span><span class="cost-bar" style="width: 54%"></span><span class="cost-value">$138</span></div>
+                <div class="cost-row"><span class="cost-label">70–79"</span><span class="cost-bar" style="width: 70%"></span><span class="cost-value">$179</span></div>
+                <div class="cost-row"><span class="cost-label">80" and over</span><span class="cost-bar" style="width: 100%"></span><span class="cost-value">$257</span></div>
+            </div>
+            <p class="note">
+                Estimated cost per year for a typical (median) TV in each size group. Based on the labelled
+                energy use (which assumes about 10 hours of viewing a day) and an assumed electricity price of
+                30c per kWh. Your actual cost depends on how much you watch and your electricity plan.
+            </p>
+        </article>
+
+        <!-- 4. The twist -->
+        <h2 class="story-heading">But size isn't everything: check the stars</h2>
+
+        <article class="chart">
+            <p class="question">Question 6: Do bigger TVs get worse star ratings?</p>
+            <h3>Efficient TVs come in every size</h3>
             <figure>
                 <img src="images/charts/q6-rating-vs-size.png"
-                     alt="Scatter plot of screen size in inches against star rating index">
+                     alt="Scatter plot of screen size against star rating index, showing ratings from about 1 to 9 at every screen size with no clear trend">
                 <figcaption>
-                    There is no strong relationship. Star ratings vary widely (roughly 1 to 9) at every
-                    screen size, so a bigger TV is not necessarily less efficient for its size.
+                    There's no trend here: star ratings range from about 1 to 9 at almost every size.
+                    Star ratings compare TVs <em>of similar size</em>, so a large TV can still earn a high rating.
+                </figcaption>
+            </figure>
+            <div class="callout">
+                <strong>Why this matters:</strong> among 65" TVs alone, labelled energy use ranges from
+                185 to 1,135&nbsp;kWh a year. That's roughly <strong>$56 to $341 a year</strong> for the same
+                screen size. Over a TV's 10-year life, the less efficient model could cost you around
+                $2,800 more to run.
+            </div>
+        </article>
+
+        <!-- 5. Smaller factors -->
+        <h2 class="story-heading">What about technology and brand?</h2>
+
+        <article class="chart">
+            <p class="question">Question 4: Which screen technology uses the least power?</p>
+            <h3>OLED uses a little more, but the gap is small</h3>
+            <figure>
+                <img src="images/charts/q4-tech-power.png"
+                     alt="Bar chart of median average on-mode power by screen technology: LCD 71.35 watts, LCD (LED) 106 watts, OLED 112.70 watts">
+                <figcaption>
+                    Standard LCD has the lowest median power (71&nbsp;W), then LCD (LED) at 106&nbsp;W and
+                    OLED at 113&nbsp;W. Be careful: OLED TVs tend to be bigger (median around 65") than
+                    LCD TVs (around 55"), so part of this difference is really about screen size.
                 </figcaption>
             </figure>
         </article>
 
-        <!-- Q7: two views, switched with tabs -->
         <article class="chart">
-            <h2>7. Are there differences in power consumption between brands?</h2>
+            <p class="question">Question 7: Do some brands use more power than others?</p>
+            <h3>Brands vary, but models vary even more</h3>
             <div class="chart-tabs" role="tablist">
-                <button class="tab active" data-view="box" role="tab" aria-selected="true"
-                        data-tooltip="Spread of power use within each brand">Box plot (all brands)</button>
-                <button class="tab" data-view="bar" role="tab" aria-selected="false"
+                <button class="tab active" data-view="bar" role="tab" aria-selected="true"
                         data-tooltip="10 brands with the highest average power">Bar chart (top 10)</button>
+                <button class="tab" data-view="box" role="tab" aria-selected="false"
+                        data-tooltip="Spread of power use within each brand">Box plot (all brands)</button>
             </div>
             <figure>
-                <img class="chart-view active" data-view="box" src="images/charts/q7-brand-power-box.png"
-                     alt="Box plot of average on-mode power for each brand">
-                <img class="chart-view" data-view="bar" src="images/charts/q7-brand-power-bar.png"
-                     alt="Bar chart of the ten brands with the highest average power, led by Spark Electronics at 233.45">
+                <img class="chart-view active" data-view="bar" src="images/charts/q7-brand-power-bar.png"
+                     alt="Bar chart of the ten brands with the highest average power, led by Spark Electronics at 233.45 watts">
+                <img class="chart-view" data-view="box" src="images/charts/q7-brand-power-box.png"
+                     alt="Box plot of average on-mode power for each brand, showing wide spread within most brands">
                 <figcaption>
-                    Yes. The box plot shows power use varies a lot between brands and within each brand.
-                    Spark Electronics has the highest average power (233.45&nbsp;W), well above the other
-                    top-10 brands, which range from about 130 to 182&nbsp;W.
+                    Spark Electronics has the highest average (233&nbsp;W), but it only sells TVs of 55" and
+                    larger, so that's mostly about size. Big brands such as
+                    Samsung, Sony, TCL, LG and Hisense average 130 to 155&nbsp;W. But the box plot shows that power use varies widely
+                    <em>within</em> each brand, mostly because each brand sells many sizes. Picking a
+                    brand won't guarantee an efficient TV. Compare individual models instead.
                 </figcaption>
             </figure>
         </article>
+
+        <!-- 6. Recommendation -->
+        <h2 class="story-heading">What this means for you</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>1. Choose the size you need</h3>
+                <p>Measure your room. Every step up in size adds to your yearly running cost.</p>
+            </article>
+            <article class="card">
+                <h3>2. Compare stars within that size</h3>
+                <p>Two TVs of the same size can cost hundreds of dollars a year apart. More stars means lower bills.</p>
+            </article>
+            <article class="card">
+                <h3>3. Read the label, not the brand</h3>
+                <p>Check the kWh per year figure on the Energy Rating Label for each model you're considering.</p>
+            </article>
+        </div>
+
+        <p class="source">
+            <strong>Data source:</strong>
+            <a href="https://data.gov.au/data/dataset/559708e5-480e-4f94-8429-c49571e82761" target="_blank" rel="noopener">
+            Energy Rating Data for Household Appliances – Labelled Products (Televisions)</a>,
+            Australian Government Department of Climate Change, Energy, the Environment and Water,
+            via data.gov.au (CC BY 3.0 AU). The data shows TV models registered for sale, not how many
+            were sold.
+        </p>
     </main>
 
     <!-- Footer is added here by js/script.js -->
