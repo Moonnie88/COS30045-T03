@@ -24,7 +24,7 @@ images/charts/    – KNIME charts answering the 7 TV questions
 - Current page: each page's `<body data-page="...">` tells the script which nav link gets the `active` class. The browser tab title also shows the page name.
 - Colour palette matched to the logo: cream `#f9e5a7`, orange `#eca843`, brown `#7b6344`.
 - Footer with year, author name and GenAI acknowledgement.
-- Q1 and Q7 charts have tabs to switch between two chart views (pie/bar and bar/box plot).
+- Q1 and Q7 charts have tabs to switch between chart views (Q1: pie/bar; Q7: bar/box plot/Spark Electronics sizes).
 
 ---
 
@@ -62,7 +62,7 @@ images/charts/    – KNIME charts answering the 7 TV questions
 | 3 | **Main finding:** screen size is the biggest driver of power use | Q5 scatter plot |
 | 4 | **In dollars:** yearly running cost by screen size | Cost bar chart (HTML/CSS) |
 | 5 | **The twist:** star ratings are not tied to size, so efficient big TVs exist; same-size TVs can differ by ~$285/year | Q6 scatter plot + callout |
-| 6 | **Smaller factors:** technology and brand matter less than size and stars | Q4, Q7 |
+| 6 | **Smaller factors:** technology and brand matter less than size and stars; Spark Electronics' high average is because it only sells large TVs | Q4, Q7 + Spark Electronics size chart |
 | 7 | **Recommendation:** choose the size you need, compare stars within that size, read the label | Three action cards |
 
 ---
@@ -86,6 +86,7 @@ Processing was done in KNIME:
 3. **GroupBy:** counted models by screen technology (Q1), screen size (Q2) and brand (Q3); calculated the median `Avg_mode_power` by screen technology (Q4) and the mean by brand (Q7).
 4. **Sorter + Row Filter:** kept the top 10 brands for Q3 and Q7.
 5. **Visualisation nodes:** pie and bar charts (Q1–Q4, Q7), scatter plots (Q5, Q6) and a box plot (Q7).
+6. **Row Filter + GroupBy (checking an insight):** filtered to Spark Electronics and counted models by screen size, to check why it has the highest average power (all 25 models are 55" or larger).
 
 ### Privacy
 The dataset describes products, not people. It contains no personal information: only brand names, model numbers, technical specifications and company website links that suppliers submit publicly. No privacy risk was identified.
@@ -97,7 +98,7 @@ The dataset describes products, not people. It contains no personal information:
 - **Electricity price is an assumption:** $0.30/kWh is an approximate figure; prices vary by state, retailer and plan.
 - **Inconsistent brand names:** the same company can appear under different names (e.g. "SAMSUNG" and "SAMSUNG ELECTRONICS"), which splits their counts.
 - **Confounding with size:** OLED TVs are larger on average than LCD TVs, so technology comparisons partly reflect screen size.
-- **Brand averages reflect the sizes a brand sells:** e.g. Spark Electronics has the highest average power, but all 29 of its models are 55" or larger, so this reflects screen size more than efficiency. Brands with few models also give less reliable averages.
+- **Brand averages reflect the sizes a brand sells:** e.g. Spark Electronics has the highest average power, but all 25 of its models are 55" or larger (checked in KNIME with a Row Filter + GroupBy by screen size), so this reflects screen size more than efficiency. Brands with few models also give less reliable averages.
 - **The dataset changes daily** as models are registered and expire, so counts depend on the download date.
 
 ### Ethics
@@ -120,10 +121,11 @@ I used **Claude Code** (Anthropic) to help build and explain this website. All A
 | 23/9/2026 | Claude Code | Split the site into separate HTML pages | Tested all pages and navigation |
 | 23/9/2026 | Claude Code | Draft the T03 data story text, running cost chart and README sections | input the real data and do the miro |
 
-The charts (Q1–Q7) were created by me in KNIME. <!-- confirm -->
+The charts (Q1–Q7) were created by me in KNIME.
+The miro is done by me and idea taken from claude. After that, prompt claude to implement and enhance the idea.
 
 ### Reflection
 
 <!-- Write a short reflection: how helpful was the tool, what did it get wrong, what did you learn? -->
-Having claude to help me code out the website is faster and it gives me what I imagined.
+The tool is helpful in perfecting my idea and in fact it is getting even better. It does make a statement without showing the prove as it done the checking at the back but people will prefer to see the evidence. I have learnt to also check and making sure the statement being put out there is true.
 

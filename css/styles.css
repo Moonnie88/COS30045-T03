@@ -249,6 +249,7 @@ figcaption {
 /* ---------- Chart view tabs ---------- */
 .chart-tabs {
     display: flex;
+    flex-wrap: wrap;    /* three tabs wrap onto a second line on narrow phones */
     gap: 6px;
     border-bottom: 3px solid var(--brown);
     margin-bottom: 12px;

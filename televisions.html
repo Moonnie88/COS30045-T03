@@ -167,15 +167,20 @@
                         data-tooltip="10 brands with the highest average power">Bar chart (top 10)</button>
                 <button class="tab" data-view="box" role="tab" aria-selected="false"
                         data-tooltip="Spread of power use within each brand">Box plot (all brands)</button>
+                <button class="tab" data-view="spark" role="tab" aria-selected="false"
+                        data-tooltip="Why Spark Electronics has the highest average">Spark Electronics sizes</button>
             </div>
             <figure>
                 <img class="chart-view active" data-view="bar" src="images/charts/q7-brand-power-bar.png"
                      alt="Bar chart of the ten brands with the highest average power, led by Spark Electronics at 233.45 watts">
                 <img class="chart-view" data-view="box" src="images/charts/q7-brand-power-box.png"
                      alt="Box plot of average on-mode power for each brand, showing wide spread within most brands">
+                <img class="chart-view" data-view="spark" src="images/charts/q7-spark-sizes.png"
+                     alt="Bar chart of Spark Electronics models by screen size: 55 inch 10, 64 inch 1, 65 inch 4, 74 inch 5, 86 inch 5">
                 <figcaption>
-                    Spark Electronics has the highest average (233&nbsp;W), but it only sells TVs of 55" and
-                    larger, so that's mostly about size. Big brands such as
+                    Spark Electronics has the highest average (233&nbsp;W), but the "Spark Electronics sizes"
+                    tab shows why: all 25 of its models are 55" or larger, so its high average is mostly about
+                    screen size, not poor efficiency. Big brands such as
                     Samsung, Sony, TCL, LG and Hisense average 130 to 155&nbsp;W. But the box plot shows that power use varies widely
                     <em>within</em> each brand, mostly because each brand sells many sizes. Picking a
                     brand won't guarantee an efficient TV. Compare individual models instead.
